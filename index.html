@@ -37,51 +37,49 @@
 
       /* Position each flower in a circular pattern */
       .flower {
-        position: absolute;
-        top: 420px;
         cursor: pointer;
         border-radius: 50%;
         transition: transform 0.6s ease;
         --petal-color: #ff6b9b;
-        --center-color: #fafafa;
+        --center-color: #ffcb00;
       }
 
       .flower:nth-child(1) {
-        transform: rotate(0deg) translateX(300px);
+        transform: rotate(0deg) translateX(150px);
       }
       .flower:nth-child(2) {
-        transform: rotate(36deg) translateX(300px);
+        transform: rotate(36deg) translateX(150px);
       }
       .flower:nth-child(3) {
-        transform: rotate(72deg) translateX(300px);
+        transform: rotate(72deg) translateX(150px);
       }
       .flower:nth-child(4) {
-        transform: rotate(108deg) translateX(300px);
+        transform: rotate(108deg) translateX(150px);
       }
       .flower:nth-child(5) {
-        transform: rotate(144deg) translateX(300px);
+        transform: rotate(144deg) translateX(150px);
       }
       .flower:nth-child(6) {
-        transform: rotate(180deg) translateX(300px);
+        transform: rotate(180deg) translateX(150px);
       }
       .flower:nth-child(7) {
-        transform: rotate(216deg) translateX(300px);
+        transform: rotate(216deg) translateX(150px);
       }
       .flower:nth-child(8) {
-        transform: rotate(252deg) translateX(300px);
+        transform: rotate(252deg) translateX(150px);
       }
       .flower:nth-child(9) {
-        transform: rotate(288deg) translateX(300px);
+        transform: rotate(288deg) translateX(150px);
       }
       .flower:nth-child(10) {
-        transform: rotate(324deg) translateX(300px);
+        transform: rotate(324deg) translateX(150px);
       }
 
       /* Petal styling */
       .petal {
         position: absolute;
-        width: 45px;
-        height: 85px;
+        width: 20px;
+        height: 38px;
         background: linear-gradient(145deg, #ff6b9b, #ff4e7d);
         border-radius: 50% 50% 0 0;
         transform-origin: center bottom;
@@ -134,11 +132,11 @@
       /* Center of the flower */
       .center {
         position: absolute;
-        width: 40px;
-        height: 40px;
-        background: #ffdb4b;
+        width: 20px;
+        height: 20px;
+        background: var(--center-color);
         border-radius: 50%;
-        top: 65px;
+        top: 28px;
         left: 0;
         box-shadow: 0 0 10px rgba(255, 205, 0, 0.6);
         z-index: 2;
@@ -152,18 +150,18 @@
 
       /* Flower scaling when clicked */
       .flower.open {
-        transform: scale(1.1) translateX(-29px) translateY(-188px);
+        transform: scale(1.1) translateX(-10px) translateY(-93px);
       }
 
       /* Note styling */
       .note {
-        width: 450px;
+        width: 200px;
         position: absolute;
-        top: 43%;
+        top: 61%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #9c3853;
-        font-size: 1.5em;
+        font-size: 14px;
         opacity: 0;
         transition: opacity 0.5s ease;
       }
@@ -171,147 +169,163 @@
       .note.show {
         opacity: 1;
       }
+
+      .main {
+        position: relative;
+      }
+
+      .title {
+        font-size: 30px;
+      }
+
+      .instruction {
+        font-size: 14px;
+      }
     </style>
   </head>
 
   <body>
-    <h1>Lo Que Amo De Ti 🌸</h1>
-    <p>Click on the flowers to make them bloom and reveal sweet messages.</p>
+    <h1 class="title">Lo Que Amo De Ti 🌸</h1>
+    <p class="instruction">
+      Click on the flowers to make them bloom and reveal sweet messages.
+    </p>
 
-    <div class="bouquet">
-      <!-- 10 flowers placed in a circular pattern -->
-      <div
-        class="flower"
-        data-note="Your thoughtfulness.\n\nYour gifts and actions, both big and small, make me so feel so cared for, understood, and appreciated."
-        data-color="pink"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
+    <div class="main">
+      <div class="bouquet">
+        <!-- 10 flowers placed in a circular pattern -->
+        <div
+          class="flower"
+          data-note="Your thoughtfulness.\n\nYour gifts and actions, both big and small, make me so feel so cared for, understood, and appreciated."
+          data-color="pink"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your uncompromising loyalty to your inner self.\n\nYou hold firm values that you stick to and live by that make you so strong."
+          data-color="yellow"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="When you open up to me.\n\nWhen you show your sensitive soft side and allow yourself to be you around me I feel proud and trusted."
+          data-color="purple"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your ability to sense the thoughts/feelings of others."
+          data-color="red"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="You're beautiful smile.\n\nThat effortless, truly happy smile that warms my heart."
+          data-color="orange"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your protective and nurturing side.\n\nYou push your sisters to be their best selves, sacrificing time, effort, and money to support them."
+          data-color="blue"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your strength.\n\nThrough all the stress and hardship you've endured, you still push on forward and up."
+          data-color="green"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your adventurous side.\n\nYou never turn down trying new things, except maybe food like balut."
+          data-color="violet"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="Your sense of humor.\n\nWhile you may have stolen some of mine, you make me laugh over the worst jokes or just your goofiness."
+          data-color="pink"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
+
+        <div
+          class="flower"
+          data-note="The way you add purpose to my life.\n\nI find joy in loving you, protecting you, providing for you, and finding comfort in you."
+          data-color="yellow"
+        >
+          <div class="petal p1"></div>
+          <div class="petal p2"></div>
+          <div class="petal p3"></div>
+          <div class="petal p4"></div>
+          <div class="petal p5"></div>
+          <div class="center"></div>
+        </div>
       </div>
 
-      <div
-        class="flower"
-        data-note="Your uncompromising loyalty to your inner self.\n\nYou hold firm values that you stick to and live by that make you so strong."
-        data-color="yellow"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="When you open up to me.\n\nWhen you show your sensitive soft side and allow yourself to be you around me I feel proud and trusted."
-        data-color="purple"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="Your ability to sense the thoughts/feelings of others."
-        data-color="red"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="You're beautiful smile.\n\nThat effortless, truly happy smile that warms my heart."
-        data-color="orange"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="Your protective and nurturing side.\n\nYou push your sisters to be their best selves, sacrificing time, effort, and money to support them."
-        data-color="blue"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="Your strength.\n\nThrough all the stress and hardship you've endured, you still push on forward and up."
-        data-color="green"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="Your adventurous side.\n\nYou never turn down trying new things, except maybe food like balut."
-        data-color="violet"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="Your sense of humor.\n\nWhile you may have stolen some of mine, you make me laugh over the worst jokes or just your goofiness."
-        data-color="pink"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
-
-      <div
-        class="flower"
-        data-note="The way you add purpose to my life.\n\nI find joy in loving you, protecting you, providing for you, and finding comfort in you."
-        data-color="yellow"
-      >
-        <div class="petal p1"></div>
-        <div class="petal p2"></div>
-        <div class="petal p3"></div>
-        <div class="petal p4"></div>
-        <div class="petal p5"></div>
-        <div class="center"></div>
-      </div>
+      <div id="noteBox" class="note"></div>
     </div>
-
-    <div id="noteBox" class="note"></div>
 
     <script>
       const flowers = document.querySelectorAll(".flower");
@@ -322,13 +336,10 @@
         const flowerColor = flower.getAttribute("data-color");
         if (flowerColor === "pink") {
           flower.style.setProperty("--petal-color", "#ff6b9b");
-          flower.style.setProperty("--center-color", "#ffcd00");
         } else if (flowerColor === "yellow") {
           flower.style.setProperty("--petal-color", "#ffea00");
-          flower.style.setProperty("--center-color", "#ffcb00");
         } else if (flowerColor === "purple") {
           flower.style.setProperty("--petal-color", "#9b59b6");
-          flower.style.setProperty("--center-color", "#8e44ad");
         }
 
         flower.addEventListener("click", () => {
