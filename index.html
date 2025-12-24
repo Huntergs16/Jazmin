@@ -42,9 +42,10 @@
       .flower {
         cursor: pointer;
         border-radius: 50%;
-        transition: transform 0.6s ease;
+        transition: transform 0.7s ease;
         --petal-color: #ff6b9b;
         --center-color: #ffcb00;
+        z-index: 4;
       }
 
       .flower:nth-child(1) {
@@ -251,7 +252,7 @@
         <div
           class="flower"
           data-note="You're beautiful smile.\n\nThat effortless, truly happy smile that warms my heart."
-          data-color="orange"
+          data-color="yellow"
         >
           <div class="petal p1"></div>
           <div class="petal p2"></div>
@@ -277,7 +278,7 @@
         <div
           class="flower"
           data-note="Your strength.\n\nThrough all the stress and hardship you've endured, you still push on onward and upward."
-          data-color="green"
+          data-color="pink"
         >
           <div class="petal p1"></div>
           <div class="petal p2"></div>
@@ -303,7 +304,7 @@
         <div
           class="flower"
           data-note="Your sense of humor.\n\nWhile you may have stolen some of mine, you make me laugh over the worst jokes or just your goofiness."
-          data-color="pink"
+          data-color="green"
         >
           <div class="petal p1"></div>
           <div class="petal p2"></div>
@@ -343,6 +344,12 @@
           flower.style.setProperty("--petal-color", "#ffea00");
         } else if (flowerColor === "purple") {
           flower.style.setProperty("--petal-color", "#9b59b6");
+        } else if (flowerColor === "blue") {
+          flower.style.setProperty("--petal-color", "#b7c9ef");
+        } else if (flowerColor === "green") {
+          flower.style.setProperty("--petal-color", "#97c294");
+        } else if (flowerColor === "orange") {
+          flower.style.setProperty("--petal-color", "#fab972");
         }
 
         flower.addEventListener("click", () => {
