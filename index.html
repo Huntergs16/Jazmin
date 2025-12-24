@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Realistic Blooming Flowers 🌸</title>
     <style>
       body {
         background-color: #f9f2f8;
         font-family: "Arial", sans-serif;
         text-align: center;
-        padding: 50px;
+        padding: 10px;
       }
 
       h1 {
@@ -21,7 +21,6 @@
       p {
         font-size: 1.2em;
         color: #aa3b6f;
-        margin-bottom: 40px;
       }
 
       /* Position the bouquet in the center */
@@ -30,9 +29,8 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 400px;
+        width: 100%;
         height: 400px;
-        margin: 40px auto 0 auto;
       }
 
       /* Position each flower in a circular pattern */
@@ -45,34 +43,34 @@
       }
 
       .flower:nth-child(1) {
-        transform: rotate(0deg) translateX(150px);
+        transform: rotate(0deg) translateX(125px);
       }
       .flower:nth-child(2) {
-        transform: rotate(36deg) translateX(150px);
+        transform: rotate(36deg) translateX(125px);
       }
       .flower:nth-child(3) {
-        transform: rotate(72deg) translateX(150px);
+        transform: rotate(72deg) translateX(125px);
       }
       .flower:nth-child(4) {
-        transform: rotate(108deg) translateX(150px);
+        transform: rotate(108deg) translateX(125px);
       }
       .flower:nth-child(5) {
-        transform: rotate(144deg) translateX(150px);
+        transform: rotate(144deg) translateX(125px);
       }
       .flower:nth-child(6) {
-        transform: rotate(180deg) translateX(150px);
+        transform: rotate(180deg) translateX(125px);
       }
       .flower:nth-child(7) {
-        transform: rotate(216deg) translateX(150px);
+        transform: rotate(216deg) translateX(125px);
       }
       .flower:nth-child(8) {
-        transform: rotate(252deg) translateX(150px);
+        transform: rotate(252deg) translateX(125px);
       }
       .flower:nth-child(9) {
-        transform: rotate(288deg) translateX(150px);
+        transform: rotate(288deg) translateX(125px);
       }
       .flower:nth-child(10) {
-        transform: rotate(324deg) translateX(150px);
+        transform: rotate(324deg) translateX(125px);
       }
 
       /* Petal styling */
@@ -150,18 +148,18 @@
 
       /* Flower scaling when clicked */
       .flower.open {
-        transform: scale(1.1) translateX(-10px) translateY(-93px);
+        transform: scale(1.1) translateX(-10px) translateY(-87px);
       }
 
       /* Note styling */
       .note {
-        width: 200px;
+        width: 158px;
         position: absolute;
-        top: 61%;
+        top: 60%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: #9c3853;
-        font-size: 14px;
+        font-size: 12px;
         opacity: 0;
         transition: opacity 0.5s ease;
       }
